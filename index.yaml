@@ -3,12 +3,12 @@ entries:
   node-red-custom:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-27T17:27:35.743097014+02:00"
+    created: "2021-04-27T17:30:33.286853105+02:00"
     description: A Helm chart for Kubernetes
-    digest: fe26339862150a49653618e5a5117e18b15afee463ad61e72ed280a348a48c10
+    digest: 6892b52a745a3e6a3cbe4c390c08a8a1b257f7642daf4fe4a62f2a2cf10a96d9
     name: node-red-custom
     type: application
     urls:
     - https://github.com/AlbertHahn/tutorial-node-red-helm.git/node-red-custom-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-27T17:27:35.741694703+02:00"
+generated: "2021-04-27T17:30:33.286218799+02:00"
