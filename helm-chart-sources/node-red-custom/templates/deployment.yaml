@@ -28,7 +28,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       volumes: #<-- this
-        - name: node-red-krones-volume #<-- this
+        - name: node-red-custom-volume #<-- this
           persistentVolumeClaim: #<-- this
             claimName: {{ .Values.persistence.claimName }} #<-- this
       containers:
