@@ -1,0 +1,54 @@
+affinity: {}
+autoscaling:
+  enabled: false
+  maxReplicas: 100
+  minReplicas: 1
+  targetCPUUtilizationPercentage: 80
+fullnameOverride: ''
+
+image:
+  pullPolicy: Always
+  repository: yourname/customname
+  tag: latest
+imagePullSecrets: []
+ingress:
+  annotations: {}
+  enabled: true
+  hosts:
+    - host: customnode-red.poc-applications.plgrnd.be #or any dns
+      paths:
+        - backend:
+            # or any other dns
+            serviceName: customnode-red.poc-applications.plgrnd.be
+            servicePort: 1880
+          path: /
+  tls: []
+
+skipuninstall: true
+persistence:
+  claimName: node-red-custom-claimdata
+  volumeName: node-red-custom-volume
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path
+  storage: 3Gi
+
+
+nameOverride: ''
+nodeSelector: {}
+podAnnotations: {}
+podSecurityContext:
+  fsGroup: 2000
+ports:
+  - containerPort: 1880
+replicaCount: 1
+resources: {}
+securityContext: {}
+service:
+  port: 1880
+  type: ClusterIP
+serviceAccount:
+  annotations: {}
+  create: true
+  name: ''
+tolerations: []
